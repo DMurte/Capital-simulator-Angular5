@@ -1,0 +1,76 @@
+  <div *ngIf="!result" class="container">
+    <div class="row" >
+      <h3>Simulator</h3>
+      <form class="col s12"  #simForm='ngForm' (ngSubmit)="runSimulation(simForm)">
+        <div class="row">
+          <div class="input-field col s6">
+            <input type="text" name="capital" class="validate" required ngModel>
+            <label>Initial Capital</label>
+          </div>
+          <div class="input-field col s6">
+            <input type="text" name="monthly_payment" required ngModel>
+            <label>Monthly  Capital</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input type="text" name="interests" required ngModel>
+            <label>Monthly Interests</label>
+          </div>
+          <div class="input-field col s6">
+            <input type="text" name="months" required ngModel>
+            <label>Months</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <button class="btn btn-large btn-register waves-effect waves-light" type="submit" name="action">Simulate
+              <i class="material-icons right">data_usage</i>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
+  <div *ngIf="result" class="container">
+      <div class="row" >
+        <h5>Simulation results</h5>
+        <form class="col s12"  #simForm='ngForm' (ngSubmit)="restart()">
+          <div class="row">
+            <div class="input-field col s6">
+              <label><strong>Final Capital : ${{finalCapital}}</strong></label>
+            </div>
+            <div class="input-field col s6">
+              <label><strong>Monthly Interests : ${{interests}}</strong></label>
+            </div>
+          </div><br>
+          <div class="row">
+              <div class="input-field col s6">
+                <button class="btn btn-small btn-register waves-effect waves-light" type="submit" name="action">Restart
+                  <i class="material-icons right">replay</i>
+                </button>
+              </div>
+            </div>
+      </form>
+    </div>
+  </div>
+
+
+
+  <div *ngIf="!result" class="loader" >
+      <div class="dot dot1"><i></i></div>
+      <div class="dot dot2"><i></i></div>
+      <div class="dot dot3"><i></i></div>
+      <div class="dot dot4"><i></i></div>
+      <div class="dot dot5"><i></i></div>
+      <div class="dot dot6"><i></i></div>
+      <div class="dot dot7"><i></i></div>
+      <div class="dot dot8"><i></i></div>
+      <div class="dot dot9"><i></i></div>
+  </div>
+
+
+
