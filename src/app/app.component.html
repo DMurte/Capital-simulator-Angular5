@@ -4,21 +4,21 @@
       <form class="col s12"  #simForm='ngForm' (ngSubmit)="runSimulation(simForm)">
         <div class="row">
           <div class="input-field col s6">
-            <input type="text" name="capital" class="validate" required ngModel>
+            <input type="number" name="capital" required ngModel>
             <label>Initial Capital</label>
           </div>
           <div class="input-field col s6">
-            <input type="text" name="monthly_payment" required ngModel>
+            <input type="number" name="monthly_payment" required ngModel>
             <label>Monthly  Capital</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s6">
-            <input type="text" name="interests" required ngModel>
+            <input type="number" name="interests" required ngModel>
             <label>Monthly Interests</label>
           </div>
           <div class="input-field col s6">
-            <input type="text" name="months" required ngModel>
+            <input type="number" name="months" required ngModel>
             <label>Months</label>
           </div>
         </div>
